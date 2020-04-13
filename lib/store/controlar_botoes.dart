@@ -11,10 +11,7 @@ abstract class _ControlarBotoes with Store {
 
   @action
   void alterarStatus(){
-    if(botao_status)
-      botao_status = false;
-    else
-      botao_status = true;
+    botao_status = botao_status ? false : true; //operador ternário
   }
 
 

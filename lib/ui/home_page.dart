@@ -13,15 +13,15 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   ControlarBotoes controle;
-  ReactionDisposer _reactionDisposer;
+  //ReactionDisposer _reactionDisposer;
 
   @override
   void initState() {
     controle = ControlarBotoes();
-   // controle.botao_status = false;
-    _reactionDisposer = autorun((_) {
+
+   /* _reactionDisposer = autorun((_) {
       controle.alterarStatus();
-    });
+    });*/
     super.initState();
   }
 
@@ -32,14 +32,14 @@ class _MyHomePageState extends State<MyHomePage> {
         body: Center(
           child: Column(children: <Widget>[
             FloatingActionButton(
-              child: Icon(Icons.add),
+              child: Icon(Icons.track_changes),
 
                 onPressed: () {
                   controle.alterarStatus();
-
+                  print(controle.botao_status);
                 }
             ),
-            //print(controle.botao_status),
+
             Observer(builder: (_) {
               return SizedBox(
                 height: 44,
@@ -48,8 +48,8 @@ class _MyHomePageState extends State<MyHomePage> {
                       borderRadius: BorderRadius.circular(32),
                     ),
                     child: controle.botao_status
-                        ? Text("Desativado")
-                        : Text('Ativado'),
+                        ? Text("Ativado")
+                        : Text('Desativado'),
                     onPressed: () {}),
               );
             })
@@ -57,10 +57,10 @@ class _MyHomePageState extends State<MyHomePage> {
         ));
   }
 
-  @override
+ /* @override
   void dispose() {
     _reactionDisposer();
     super.dispose();
-  }
+  }*/
 
 }
