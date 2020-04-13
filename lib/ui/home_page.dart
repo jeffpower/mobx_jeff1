@@ -17,8 +17,9 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   void initState() {
-    autorun((_) {
-      controle.alterarStatus;
+    controle.botao_status = false;
+    _reactionDisposer = autorun((_) {
+      controle.alterarStatus();
     });
     super.initState();
   }
@@ -29,10 +30,15 @@ class _MyHomePageState extends State<MyHomePage> {
         appBar: AppBar(title: Text("Teste de Mobx")),
         body: Center(
           child: Column(children: <Widget>[
-            FloatingActionButton(onPressed: () {
-              controle.alterarStatus;
-              print(controle.botao_status);
-            }),
+            FloatingActionButton(
+              child: Icon(Icons.add),
+
+                onPressed: () {
+                  controle.alterarStatus();
+
+                }
+            ),
+            //print(controle.botao_status),
             Observer(builder: (_) {
               return SizedBox(
                 height: 44,
@@ -49,4 +55,11 @@ class _MyHomePageState extends State<MyHomePage> {
           ]),
         ));
   }
+
+  @override
+  void dispose() {
+    _reactionDisposer();
+    super.dispose();
+  }
+
 }
