@@ -14,7 +14,8 @@ abstract class _ControlarBotoes with Store {
     botao_status = botao_status ? false : true; //operador ternário
   }
 
-
+  @computed
+  String get meu_texto => botao_status ? "Muito bem" : "Muito mal :{";
 
 
 }

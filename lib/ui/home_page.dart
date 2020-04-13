@@ -37,20 +37,26 @@ class _MyHomePageState extends State<MyHomePage> {
                 onPressed: () {
                   controle.alterarStatus(); //dentro da função coloca os parenteses como funcção também
                   print(controle.botao_status);
+                  print(controle.meu_texto); //texto dentro do computed
                 }
             ),
 
             Observer(builder: (_) {
-              return SizedBox(
-                height: 44,
-                child: RaisedButton(
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(32),
-                    ),
-                    child: controle.botao_status
-                        ? Text("Ativado")
-                        : Text('Desativado'),
-                    onPressed: () {}),
+              return Column(
+                children: <Widget>[
+                  SizedBox(
+                    height: 44,
+                    child: RaisedButton(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(32),
+                        ),
+                        child: controle.botao_status
+                            ? Text("Ativado")
+                            : Text('Desativado'),
+                        onPressed: () {}),
+                  ),
+                  Text(controle.meu_texto)
+                ],
               );
             })
           ]),

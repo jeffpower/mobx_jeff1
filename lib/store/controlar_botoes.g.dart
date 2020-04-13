@@ -9,6 +9,12 @@ part of 'controlar_botoes.dart';
 // ignore_for_file: non_constant_identifier_names, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic
 
 mixin _$ControlarBotoes on _ControlarBotoes, Store {
+  Computed<String> _$meu_textoComputed;
+
+  @override
+  String get meu_texto =>
+      (_$meu_textoComputed ??= Computed<String>(() => super.meu_texto)).value;
+
   final _$botao_statusAtom = Atom(name: '_ControlarBotoes.botao_status');
 
   @override
@@ -41,7 +47,8 @@ mixin _$ControlarBotoes on _ControlarBotoes, Store {
 
   @override
   String toString() {
-    final string = 'botao_status: ${botao_status.toString()}';
+    final string =
+        'botao_status: ${botao_status.toString()},meu_texto: ${meu_texto.toString()}';
     return '{$string}';
   }
 }
