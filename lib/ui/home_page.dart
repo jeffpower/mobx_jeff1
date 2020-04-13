@@ -33,9 +33,9 @@ class _MyHomePageState extends State<MyHomePage> {
           child: Column(children: <Widget>[
             FloatingActionButton(
               child: Icon(Icons.track_changes),
-
+                //onPressed: controle.alterarStatus; //outra maniera de fazer, chamando o objeto
                 onPressed: () {
-                  controle.alterarStatus();
+                  controle.alterarStatus(); //dentro da função coloca os parenteses como funcção também
                   print(controle.botao_status);
                 }
             ),
