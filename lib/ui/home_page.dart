@@ -17,7 +17,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   void initState() {
-    controle.botao_status = false;
+    controle = ControlarBotoes();
+   // controle.botao_status = false;
     _reactionDisposer = autorun((_) {
       controle.alterarStatus();
     });
