@@ -10,8 +10,11 @@ abstract class _ControlarBotoes with Store {
   bool botao_status = false;
 
   @action
-  void alterar_status(){
-    if(botao_status) ? botao_status = false : botao_status = true;
+  void alterarStatus(){
+    if(botao_status)
+      botao_status = false;
+    else
+      botao_status = true;
   }
 
 

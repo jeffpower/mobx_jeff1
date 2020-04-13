@@ -30,10 +30,10 @@ mixin _$ControlarBotoes on _ControlarBotoes, Store {
       ActionController(name: '_ControlarBotoes');
 
   @override
-  void alterar_status() {
+  void alterarStatus() {
     final _$actionInfo = _$_ControlarBotoesActionController.startAction();
     try {
-      return super.alterar_status();
+      return super.alterarStatus();
     } finally {
       _$_ControlarBotoesActionController.endAction(_$actionInfo);
     }
