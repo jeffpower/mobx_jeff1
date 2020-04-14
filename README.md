@@ -10,11 +10,16 @@
 
 ### adicionar ao pubspecs.yaml:
 dependencies:
-  mobx:       
+
+  mobx:
+  
   flutter_mobx:
   
+  
 dev_dependencies:
+
   mobx_codegen:
+  
   build_runner:
   
 
