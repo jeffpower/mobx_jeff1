@@ -1,5 +1,5 @@
 ## Simple mobx flutter example
-# Exemplo simples de mobx.
+## Exemplo simples de mobx com flutter.
 
 - Os arquivos xxx.g.dart são gerados automaticamente pelo code generator com o seguinte comando no terminal:
      
