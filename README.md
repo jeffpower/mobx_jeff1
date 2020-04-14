@@ -1,4 +1,11 @@
-# mobxjeff1
+# simple mobx flutter example
+# Exemplo simples de mobx.
+
+- Os arquivos xxx.g.dart são gerados automaticamente pelo code generator com o seguinte comando no terminal:
+     
+     flutter packages pub run build_runner build
+
+
 
 A new Flutter application.
 
