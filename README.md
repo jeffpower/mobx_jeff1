@@ -6,11 +6,13 @@
      ###      flutter packages pub run build_runner build
 
 
-## adicionar ao pubspecs.yaml:
-dependencies:
-  mobx: any        
-  flutter_mobx: any
 
+
+### adicionar ao pubspecs.yaml:
+dependencies:
+  mobx:       
+  flutter_mobx:
+  
 dev_dependencies:
   mobx_codegen:
   build_runner:
