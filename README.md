@@ -9,7 +9,7 @@
 
 
 ###### adicionar ao pubspecs.yaml:
-'''
+"""
 dependencies:
    mobx:
    flutter_mobx:
@@ -17,7 +17,7 @@ dependencies:
  dev_dependencies:
     mobx_codegen: 
     build_runner:
-'''
+"""
 
 
 
